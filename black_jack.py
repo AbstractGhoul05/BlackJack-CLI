@@ -141,8 +141,10 @@ while True:
 
     player = Hand()
     player.add_card(deck.deal())
+    player.add_card(deck.deal())
 
     dealer = Hand()
+    dealer.add_card(deck.deal())
     dealer.add_card(deck.deal())
 
     chips = Chips()
