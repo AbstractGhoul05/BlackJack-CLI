@@ -87,7 +87,7 @@ def hit_or_stand(deck, hand):
     global playing
 
     while True:
-        x = input("Would you like to Hit or Stand? Enter 'h' or 's'")
+        x = input("\nWould you like to Hit or Stand? Enter 'h' or 's'")
         if x[0].lower() == 'h':
             hit(deck, hand)
         elif x[0].lower() == 's':
@@ -99,7 +99,7 @@ def hit_or_stand(deck, hand):
         break
 
 def show_some(player, dealer):
-    print("Dealer's Hand: ")
+    print("\n\nDealer's Hand: ")
     print("<card hidden>")
     print(dealer.cards[1])
     print("\nPlayer's Hand: ")
@@ -107,7 +107,7 @@ def show_some(player, dealer):
         print(card)
 
 def show_all(player, dealer):
-    print("Dealer's Hand: ")
+    print("\n\nDealer's Hand: ")
     for card in dealer.cards:
         print(card)
     print("\nPlayer's Hand: ")
@@ -115,26 +115,26 @@ def show_all(player, dealer):
         print(card)
 
 def player_busts(chips):
-    print("Player Busts!")
+    print("\nPlayer Busts!")
     chips.lose_bet()
 
 def player_wins(chips):
-    print("Player Wins!")
+    print("\nPlayer Wins!")
     chips.win_bet()
 
 def dealer_busts(chips):
-    print("Dealer Busts!")
+    print("\nDealer Busts!")
     chips.win_bet()
 
 def dealer_wins(chips):
-    print("Dealer Wins!")
+    print("\nDealer Wins!")
     chips.lose_bet()
 
 def push(player, dealer):
-    print("Dealer and Player tie! It's a push.")
+    print("\nDealer and Player tie! It's a push.")
 
 while True:
-    print("Welcome to BlackJack!")
+    print("Welcome to BlackJack!\n")
 
     deck = Deck()
     deck.shuffle()
@@ -181,9 +181,9 @@ while True:
 
     print(f"\nPlayer's winnings stand at {chips.total}")
 
-    play_again = input("Would you like to play again? Enter 'y' or 'n'")
+    play_again = input("\nWould you like to play again? Enter 'y' or 'n'")
     if play_again[0].lower() == 'y':
         playing = True
     else:
-        print("Thanks for playing!")
+        print("\nThanks for playing!")
         break
